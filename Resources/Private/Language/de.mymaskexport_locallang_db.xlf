@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2018-07-15T21:36:23+02:00" product-name="my_maskexport_sitepackage">
+    <header/>
+    <body>
+      <trans-unit id="tt_content.tx_mymaskexport_simplecheckbox" xml:space="preserve">
+        <target>Meine einfache Checkbox</target>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_mymaskexport_simpleint" xml:space="preserve">
+        <target>Mein einfacher Int</target>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_mymaskexport_simpleradio" xml:space="preserve">
+        <target>Mein einfacher Radio</target>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_mymaskexport_simpleselectboxmulti" xml:space="preserve">
+        <target>Meine einfache Selectbox (multi)</target>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_mymaskexport_simpleselectboxsingle" xml:space="preserve">
+        <target>Meine einfache Selectbox (single)</target>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_mymaskexport_simplestring" xml:space="preserve">
+        <target>Mein einfacher String</target>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_mymaskexport_simpletext" xml:space="preserve">
+        <target>Mein einfacher Text</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
