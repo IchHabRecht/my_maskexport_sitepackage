@@ -1,0 +1,38 @@
+<h1>my_maskexport_sitepackage</h1>
+
+<f:if condition="{data.header}">
+    {data.header}<br />
+</f:if>
+
+<f:if condition="{data.tx_mymaskexport_relatedcontent}">
+    {data.tx_mymaskexport_relatedcontent}<br />
+</f:if>
+
+<f:if condition="{data_tx_mymaskexport_related_content}">
+    <f:for each="{data_tx_mymaskexport_related_content}" as="content_item">
+        <f:cObject typoscriptObjectPath="tt_content" data="{content_item.data}" table="tt_content" /><br />
+    </f:for>
+</f:if>
+
+<f:if condition="{data_tx_mymaskexport_additionalcontent}">
+    <ul>
+        <f:for each="{data_tx_mymaskexport_additionalcontent}" as="data_item">
+            <li>
+                <f:if condition="{data_item.data_tx_mymaskexport_morecontent}">
+    <f:for each="{data_item.data_tx_mymaskexport_morecontent}" as="content_item">
+        <f:cObject typoscriptObjectPath="tt_content" data="{content_item.data}" table="tt_content" /><br />
+    </f:for>
+</f:if>
+
+
+            </li>
+        </f:for>
+    </ul>
+</f:if>
+
+<f:if condition="{data_tx_mymaskexport_images}">
+    <f:for each="{data_tx_mymaskexport_images}" as="file">
+        <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" /><br />
+        {file.description} / {file.identifier}<br />
+    </f:for>
+</f:if>

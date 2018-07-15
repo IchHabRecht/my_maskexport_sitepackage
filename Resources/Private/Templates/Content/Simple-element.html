@@ -1,0 +1,46 @@
+<h1>my_maskexport_sitepackage</h1>
+
+<f:if condition="{data.tx_mymaskexport_simplestring}">
+    {data.tx_mymaskexport_simplestring}<br />
+</f:if>
+
+<f:if condition="{data.tx_mymaskexport_simpleint}">
+    {data.tx_mymaskexport_simpleint}<br />
+</f:if>
+
+<f:if condition="{data.tx_mymaskexport_simpletext}">
+    <f:format.nl2br>{data.tx_mymaskexport_simpletext}</f:format.nl2br><br />
+</f:if>
+
+<f:if condition="{data.tx_mymaskexport_simplecheckbox}">
+    <f:then>
+        On<br />
+    </f:then>
+    <f:else>
+        Off<br />
+     </f:else>
+</f:if>
+
+<f:if condition="{data.tx_mymaskexport_simpleradio}">
+    <f:switch expression="{data.tx_mymaskexport_simpleradio}">
+        <f:case value="1">Value is: 1</f:case>
+        <f:case value="2">Value is: 2</f:case>
+        <f:case value="3">Value is: 3</f:case>
+    </f:switch><br />
+</f:if>
+
+<f:if condition="{data.tx_mymaskexport_simpleselectboxsingle}">
+    <f:switch expression="{data.tx_mymaskexport_simpleselectboxsingle}">
+        <f:case value="1">Value is: 1</f:case>
+        <f:case value="2">Value is: 2</f:case>
+        <f:case value="3">Value is: 3</f:case>
+    </f:switch><br />
+</f:if>
+
+<f:if condition="{data.tx_mymaskexport_simpleselectboxmulti}">
+    <f:switch expression="{data.tx_mymaskexport_simpleselectboxmulti}">
+        <f:case value="1">Value is: 1</f:case>
+        <f:case value="2">Value is: 2</f:case>
+        <f:case value="3">Value is: 3</f:case>
+    </f:switch><br />
+</f:if>
