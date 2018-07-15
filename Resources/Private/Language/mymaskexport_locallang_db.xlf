@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2018-07-15T21:12:23+02:00" product-name="my_maskexport_sitepackage">
+    <header/>
+    <body>
+        <trans-unit id="tt_content.tx_mymaskexport_simpleselectboxsingle" xml:space="preserve">
+        <source>my_maskexport_sitepackage - Simple selectbox (single)</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
