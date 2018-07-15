@@ -3,6 +3,9 @@
     "description": "",
     "type": "typo3-cms-extension",
     "license": "GPL-2.0-or-later",
+    "require": {
+        "ichhabrecht/my-mask-export": "^0.1"
+    },
     "replace": {
         "my_maskexport_sitepackage": "self.version",
         "typo3-ter/my-maskexport-sitepackage": "self.version"
