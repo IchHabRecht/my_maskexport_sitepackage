@@ -1,0 +1,15 @@
+{
+    "name": "ichhabrecht/my-maskexport-sitepackage",
+    "description": "",
+    "type": "typo3-cms-extension",
+    "license": "GPL-2.0-or-later",
+    "replace": {
+        "my_maskexport_sitepackage": "self.version",
+        "typo3-ter/my-maskexport-sitepackage": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "my_maskexport_sitepackage"
+        }
+    }
+}
