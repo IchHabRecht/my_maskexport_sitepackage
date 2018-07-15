@@ -1,0 +1,47 @@
+<h1>my_maskexport_sitepackage</h1>
+
+<f:if condition="{processedRow.header}">
+    <strong><f:translate key="LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header" /></strong>
+    {processedRow.header} (raw={row.header})<br>
+</f:if>
+<f:if condition="{processedRow.tx_mymaskexport_related_content}">
+    <strong><f:translate key="LLL:EXT:my_mask_export/Resources/Private/Language/locallang_db.xlf:tt_content.tx_mymaskexport_related_content" /></strong>
+<br><f:for each="{processedRow.tx_mymaskexport_related_content}" as="item">
+    <ul>
+        <li>
+            <f:translate key="LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header" /> {item.header} (id={item.uid})<br/>
+        </li>
+    </ul>
+</f:for>
+</f:if>
+<f:if condition="{processedRow.tx_mymaskexport_additionalcontent}">
+    <strong><f:translate key="LLL:EXT:my_mask_export/Resources/Private/Language/locallang_db.xlf:tt_content.tx_mymaskexport_additionalcontent" /></strong>
+<br><f:for each="{processedRow.tx_mymaskexport_additionalcontent}" as="item">
+    <ul>
+        <li>
+            <f:translate key="LLL:EXT:my_mask_export/Resources/Private/Language/locallang_db.xlf:tx_mymaskexport_additionalcontent.tx_mymaskexport_morecontent" /> (id={item.uid})<br/>
+<f:for each="{item.tx_mymaskexport_morecontent}" as="item_item">
+    <ul>
+        <li>
+            <f:translate key="LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header" /> {item_item.header} (id={item_item.uid})<br/>
+        </li>
+    </ul>
+</f:for>
+        </li>
+    </ul>
+</f:for>
+</f:if>
+<f:if condition="{processedRow.tx_mymaskexport_images}">
+    <strong><f:translate key="LLL:EXT:my_mask_export/Resources/Private/Language/locallang_db.xlf:tt_content.tx_mymaskexport_images" /></strong>
+<br><f:for each="{processedRow.tx_mymaskexport_images}" as="item">
+    <ul>
+        <li>
+    <ul>
+        <f:for each="{item.uid_local}" as="file">
+            <li><f:translate key="LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.uid_local" /> {file.table}|{file.uid}|{file.title} (id={item.uid})</li>
+        </f:for>
+    </ul>
+        </li>
+    </ul>
+</f:for>
+</f:if>

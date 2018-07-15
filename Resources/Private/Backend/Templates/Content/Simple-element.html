@@ -1,0 +1,34 @@
+<h1>my_maskexport_sitepackage</h1>
+
+<f:if condition="{processedRow.tx_mymaskexport_simplestring}">
+    <strong><f:translate key="LLL:EXT:my_mask_export/Resources/Private/Language/locallang_db.xlf:tt_content.tx_mymaskexport_simplestring" /></strong>
+    {processedRow.tx_mymaskexport_simplestring} (raw={row.tx_mymaskexport_simplestring})<br>
+</f:if>
+<f:if condition="{processedRow.tx_mymaskexport_simpleint}">
+    <strong><f:translate key="LLL:EXT:my_mask_export/Resources/Private/Language/locallang_db.xlf:tt_content.tx_mymaskexport_simpleint" /></strong>
+    {processedRow.tx_mymaskexport_simpleint} (raw={row.tx_mymaskexport_simpleint})<br>
+</f:if>
+<f:if condition="{processedRow.tx_mymaskexport_simpletext}">
+    <strong><f:translate key="LLL:EXT:my_mask_export/Resources/Private/Language/locallang_db.xlf:tt_content.tx_mymaskexport_simpletext" /></strong>
+    {processedRow.tx_mymaskexport_simpletext} (raw={row.tx_mymaskexport_simpletext})<br>
+</f:if>
+<f:if condition="{processedRow.tx_mymaskexport_simplecheckbox}">
+    <strong><f:translate key="LLL:EXT:my_mask_export/Resources/Private/Language/locallang_db.xlf:tt_content.tx_mymaskexport_simplecheckbox" /></strong>
+    {processedRow.tx_mymaskexport_simplecheckbox} (raw={row.tx_mymaskexport_simplecheckbox})<br>
+</f:if>
+<f:if condition="{processedRow.tx_mymaskexport_simpleradio}">
+    <strong><f:translate key="LLL:EXT:my_mask_export/Resources/Private/Language/locallang_db.xlf:tt_content.tx_mymaskexport_simpleradio" /></strong>
+    {processedRow.tx_mymaskexport_simpleradio} (raw={row.tx_mymaskexport_simpleradio})<br>
+</f:if>
+<f:if condition="{processedRow.tx_mymaskexport_simpleselectboxsingle}">
+    <strong><f:translate key="LLL:EXT:my_mask_export/Resources/Private/Language/locallang_db.xlf:tt_content.tx_mymaskexport_simpleselectboxsingle" /></strong>
+    {processedRow.tx_mymaskexport_simpleselectboxsingle.0} (raw={row.tx_mymaskexport_simpleselectboxsingle})<br>
+</f:if>
+<f:if condition="{processedRow.tx_mymaskexport_simpleselectboxmulti}">
+    <strong><f:translate key="LLL:EXT:my_mask_export/Resources/Private/Language/locallang_db.xlf:tt_content.tx_mymaskexport_simpleselectboxmulti" /></strong>
+    <ul>
+        <f:for each="{processedRow.tx_mymaskexport_simpleselectboxmulti}" as="item">
+            <li>{item}</li>
+        </f:for>
+    </ul>
+</f:if>
