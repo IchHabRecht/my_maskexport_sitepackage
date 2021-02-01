@@ -6,6 +6,11 @@
     "require": {
         "ichhabrecht/my-mask-export": "^0.1"
     },
+    "autoload": {
+        "psr-4": {
+            "IchHabRecht\\MyMaskexportSitepackage\\": "Classes/"
+        }
+    },
     "replace": {
         "typo3-ter/my-maskexport-sitepackage": "self.version"
     },
