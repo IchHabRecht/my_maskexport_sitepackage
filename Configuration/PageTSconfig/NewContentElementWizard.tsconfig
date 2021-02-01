@@ -1,0 +1,11 @@
+mod.wizards.newContentElement.wizardItems.common.show := removeFromList(default-extension-icon, empty_content_element, nested-content-elements, simple-element)
+mod.wizards.newContentElement.wizardItems.mymaskexport {
+    header = my_mask_export
+    elements {
+        default-extension-icon < mod.wizards.newContentElement.wizardItems.common.elements.default-extension-icon
+        empty_content_element < mod.wizards.newContentElement.wizardItems.common.elements.empty_content_element
+        nested-content-elements < mod.wizards.newContentElement.wizardItems.common.elements.nested-content-elements
+        simple-element < mod.wizards.newContentElement.wizardItems.common.elements.simple-element
+    }
+    show := addToList(nested-content-elements, simple-element, default-extension-icon, empty_content_element)
+}
