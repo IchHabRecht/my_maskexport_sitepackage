@@ -23,7 +23,7 @@ $EM_CONF[$_EXTKEY] = array (
   array (
     'depends' => 
     array (
-      'typo3' => '7.6.0-8.7.99',
+      'typo3' => '9.5.0-10.4.99',
       'my_mask_export' => '0.1.0',
     ),
     'conflicts' => 

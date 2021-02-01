@@ -1,0 +1,503 @@
+{
+    "mask_export": {
+        "extensionName": "my_mask_export",
+        "vendorName": "IchHabRecht",
+        "includedElements": [
+            "default-extension-icon",
+            "empty_content_element",
+            "hidden-element",
+            "nested-content-elements",
+            "simple-element"
+        ]
+    },
+    "sys_file_reference": {
+        "sql": {
+            "tx_mask_images": {
+                "sys_file_reference": {
+                    "tx_mask_images": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        }
+    },
+    "tt_content": {
+        "elements": {
+            "default-extension-icon": {
+                "color": "#000000",
+                "columns": [
+                    "header"
+                ],
+                "description": "Content Element to ensure the ext_icon.png is used as default content element icon",
+                "icon": "",
+                "key": "default-extension-icon",
+                "label": "Default Extension Icon",
+                "labels": [
+                    ""
+                ],
+                "shortLabel": "Icon"
+            },
+            "empty_content_element": {
+                "color": "#000000",
+                "description": "Content Element that has no column definitions",
+                "icon": "fa-remove",
+                "key": "empty_content_element",
+                "label": "Empty Content Element",
+                "shortLabel": "Empty"
+            },
+            "hidden-element": {
+                "color": "#ff0000",
+                "columns": [
+                    "header"
+                ],
+                "description": "This element is hidden in mask configuration",
+                "hidden": 1,
+                "icon": "fa-ban",
+                "key": "hidden-element",
+                "label": "Hidden element",
+                "labels": [
+                    ""
+                ],
+                "shortLabel": "Hidden"
+            },
+            "nested-content-elements": {
+                "color": "#000000",
+                "columns": {
+                    "0": "header",
+                    "1": "tx_mask_relatedcontent",
+                    "2": "tx_mask_related_content",
+                    "3": "tx_mask_additionalcontent",
+                    "5": "tx_mask_images"
+                },
+                "description": "",
+                "icon": "fa-newspaper-o",
+                "key": "nested-content-elements",
+                "label": "Nested content elements",
+                "labels": {
+                    "0": "",
+                    "1": "Related Content",
+                    "2": "Related Content",
+                    "3": "Additional Content",
+                    "5": "Images"
+                },
+                "shortLabel": ""
+            },
+            "simple-element": {
+                "color": "#000000",
+                "columns": [
+                    "tx_mask_simplestring",
+                    "tx_mask_simpleint",
+                    "tx_mask_simpletext",
+                    "tx_mask_simplecheckbox",
+                    "tx_mask_simpleradio",
+                    "tx_mask_simpleselectboxsingle",
+                    "tx_mask_simpleselectboxmulti"
+                ],
+                "description": "This element provides some basic examples for testing purpose",
+                "icon": "fa-check-square-o",
+                "key": "simple-element",
+                "label": "Simple element",
+                "labels": [
+                    "Simple string",
+                    "Simple int",
+                    "Simple text",
+                    "Simple checkbox",
+                    "Simple radio",
+                    "Simple selectbox (single)",
+                    "Simple selectbox (multi)"
+                ],
+                "shortLabel": "Simple element"
+            }
+        },
+        "sql": {
+            "tx_mask_additionalcontent": {
+                "tt_content": {
+                    "tx_mask_additionalcontent": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_images": {
+                "tt_content": {
+                    "tx_mask_images": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_related_content": {
+                "tt_content": {
+                    "tx_mask_related_content": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_simplecheckbox": {
+                "tt_content": {
+                    "tx_mask_simplecheckbox": "int(11) DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_simpleint": {
+                "tt_content": {
+                    "tx_mask_simpleint": "tinytext"
+                }
+            },
+            "tx_mask_simpleradio": {
+                "tt_content": {
+                    "tx_mask_simpleradio": "int(11) DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_simpleselectboxmulti": {
+                "tt_content": {
+                    "tx_mask_simpleselectboxmulti": "tinytext"
+                }
+            },
+            "tx_mask_simpleselectboxsingle": {
+                "tt_content": {
+                    "tx_mask_simpleselectboxsingle": "tinytext"
+                }
+            },
+            "tx_mask_simplestring": {
+                "tt_content": {
+                    "tx_mask_simplestring": "tinytext"
+                }
+            },
+            "tx_mask_simpletext": {
+                "tt_content": {
+                    "tx_mask_simpletext": "mediumtext"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_additionalcontent": {
+                "config": {
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "levelLinksPosition": "top",
+                        "newRecordLinkTitle": ""
+                    },
+                    "foreign_field": "parentid",
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_table_field": "parenttable",
+                    "maxitems": "",
+                    "minitems": "",
+                    "type": "inline"
+                },
+                "exclude": "1",
+                "inlineIcon": "",
+                "inlineLabel": "",
+                "key": "additionalcontent",
+                "l10n_mode": ""
+            },
+            "tx_mask_images": {
+                "config": {
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ],
+                    "maxitems": "",
+                    "minitems": ""
+                },
+                "exclude": "1",
+                "key": "images",
+                "l10n_mode": "",
+                "options": "file"
+            },
+            "tx_mask_related_content": {
+                "cTypes": [
+                    "header",
+                    "textmedia",
+                    "bullets"
+                ],
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "levelLinksPosition": "top",
+                        "newRecordLinkTitle": "",
+                        "showAllLocalizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showSynchronizationLink": "1",
+                        "useSortable": "1"
+                    },
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "tt_content",
+                    "maxitems": "",
+                    "minitems": "",
+                    "overrideChildTca": {
+                        "columns": {
+                            "colPos": {
+                                "config": {
+                                    "default": "999"
+                                }
+                            }
+                        }
+                    },
+                    "type": "inline"
+                },
+                "exclude": "1",
+                "key": "related_content",
+                "l10n_mode": ""
+            },
+            "tx_mask_relatedcontent": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "relatedcontent"
+            },
+            "tx_mask_simplecheckbox": {
+                "config": {
+                    "cols": "",
+                    "default": "",
+                    "items": [
+                        [
+                            "a"
+                        ],
+                        [
+                            "b"
+                        ],
+                        [
+                            "c"
+                        ],
+                        [
+                            "d"
+                        ],
+                        [
+                            "e"
+                        ],
+                        [
+                            "f"
+                        ],
+                        [
+                            "g"
+                        ]
+                    ],
+                    "renderType": "",
+                    "type": "check"
+                },
+                "exclude": "1",
+                "key": "simplecheckbox",
+                "l10n_mode": ""
+            },
+            "tx_mask_simpleint": {
+                "config": {
+                    "default": "",
+                    "eval": "int",
+                    "max": "",
+                    "placeholder": "",
+                    "range": {
+                        "lower": "",
+                        "upper": ""
+                    },
+                    "size": "",
+                    "type": "input"
+                },
+                "exclude": "1",
+                "key": "simpleint",
+                "l10n_mode": ""
+            },
+            "tx_mask_simpleradio": {
+                "config": {
+                    "default": "",
+                    "items": [
+                        [
+                            "radio 1",
+                            "1"
+                        ],
+                        [
+                            "radio 2",
+                            "2"
+                        ],
+                        [
+                            "radio 3",
+                            "3"
+                        ],
+                        [
+                            "radio 4",
+                            "4"
+                        ],
+                        [
+                            "radio 5",
+                            "5"
+                        ]
+                    ],
+                    "type": "radio"
+                },
+                "exclude": "1",
+                "key": "simpleradio",
+                "l10n_mode": ""
+            },
+            "tx_mask_simpleselectboxmulti": {
+                "config": {
+                    "autoSizeMax": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "items": [
+                        [
+                            "multi 1",
+                            "0"
+                        ],
+                        [
+                            "multi 2",
+                            "1"
+                        ],
+                        [
+                            "multi 3",
+                            "2"
+                        ],
+                        [
+                            "multi 4",
+                            "3"
+                        ],
+                        [
+                            "multi 5",
+                            "4"
+                        ]
+                    ],
+                    "maxitems": "999",
+                    "renderType": "selectMultipleSideBySide",
+                    "size": "",
+                    "type": "select"
+                },
+                "exclude": "1",
+                "key": "simpleselectboxmulti",
+                "l10n_mode": ""
+            },
+            "tx_mask_simpleselectboxsingle": {
+                "config": {
+                    "autoSizeMax": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "items": [
+                        [
+                            "",
+                            "0"
+                        ],
+                        [
+                            "option 1",
+                            "1"
+                        ],
+                        [
+                            "option 2",
+                            "2"
+                        ],
+                        [
+                            "option 3",
+                            "3"
+                        ],
+                        [
+                            "option 4",
+                            "4"
+                        ],
+                        [
+                            "option 5",
+                            "5"
+                        ],
+                        [
+                            "option 6",
+                            "6"
+                        ],
+                        [
+                            "option 7",
+                            "7"
+                        ]
+                    ],
+                    "maxitems": "",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "type": "select"
+                },
+                "exclude": "1",
+                "key": "simpleselectboxsingle",
+                "l10n_mode": ""
+            },
+            "tx_mask_simplestring": {
+                "config": {
+                    "default": "",
+                    "eval": "",
+                    "is_in": "",
+                    "max": "",
+                    "placeholder": "",
+                    "size": "",
+                    "type": "input"
+                },
+                "exclude": "1",
+                "key": "simplestring",
+                "l10n_mode": ""
+            },
+            "tx_mask_simpletext": {
+                "config": {
+                    "cols": "",
+                    "default": "",
+                    "eval": "",
+                    "format": "",
+                    "max": "",
+                    "placeholder": "",
+                    "rows": "",
+                    "type": "text"
+                },
+                "exclude": "1",
+                "key": "simpletext",
+                "l10n_mode": ""
+            }
+        }
+    },
+    "tx_mask_additionalcontent": {
+        "sql": {
+            "tx_mask_morecontent": {
+                "tx_mask_additionalcontent": {
+                    "tx_mask_morecontent": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_morecontent": {
+                "cTypes": [
+                    "header",
+                    "textmedia",
+                    "shortcut",
+                    "list"
+                ],
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "levelLinksPosition": "top",
+                        "newRecordLinkTitle": "",
+                        "showAllLocalizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showSynchronizationLink": "1",
+                        "useSortable": "1"
+                    },
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "tt_content",
+                    "maxitems": "",
+                    "minitems": "",
+                    "overrideChildTca": {
+                        "columns": {
+                            "colPos": {
+                                "config": {
+                                    "default": "999"
+                                }
+                            }
+                        }
+                    },
+                    "type": "inline"
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_additionalcontent",
+                "key": "morecontent",
+                "l10n_mode": "",
+                "label": "More Content",
+                "order": 4
+            }
+        }
+    }
+}
